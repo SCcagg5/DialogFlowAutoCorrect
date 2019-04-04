@@ -4,8 +4,8 @@
   
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
+/test/ | POST, GET |  |  |
 /correct/ | POST | JSON | bearer, exercice|
-/test/ | GET, POST |  |  |
 
 ### Parameters:
 ```javascript
