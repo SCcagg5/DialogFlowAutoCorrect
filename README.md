@@ -5,6 +5,7 @@
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
 /correct/ | POST | JSON | bearer, exercice|
+/test/ | GET, POST |  |  |
 
 ### Parameters:
 ```javascript
