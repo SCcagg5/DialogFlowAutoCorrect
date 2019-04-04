@@ -2,7 +2,7 @@ Docker service used to do unitary tests on your **DialogFlow** app
 
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
-/correct | POST | JSON | { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" }|
+/correct/ | POST | JSON | { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" }|
 	
 }
 
