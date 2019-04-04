@@ -11,7 +11,66 @@ Route| Method| Content Type |Parameters| Description |
 ```javascript
 { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" } 
 ```
+### Return example:
+**True***
+```javascript
+{
+    "succes": true,
+    "queryInfos": {
+        "route": "/correct/",
+        "params": {
+            "exercice": "1",
+            "bearer": "2f5583ceb8904df4a35d434a139709b2"
+        }
+    },
+    "error": null,
+    "data": {
+        "succes": true,
+        "got": [
+            "Bonjour !"
+        ],
+        "waited": [
+            [
+                "Bienvenue !",
+                "Salutations !",
+                "Salut !",
+                "Bonjour !"
+            ]
+        ]
+    },
+    "status": 200
+}
+```
 
+**False***
+```javascript
+{
+    "succes": true,
+    "queryInfos": {
+        "route": "/correct/",
+        "params": {
+            "exercice": "1",
+            "bearer": "2f5583ceb8904df4a35d434a139709b2"
+        }
+    },
+    "error": null,
+    "data": {
+        "succes": false,
+        "got": [
+            "Hello"
+        ],
+        "waited": [
+            [
+                "Bienvenue !",
+                "Salutations !",
+                "Salut !",
+                "Bonjour !"
+            ]
+        ]
+    },
+    "status": 200
+}
+```
 
 ## Launching the App:  
   
