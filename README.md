@@ -12,7 +12,7 @@ Route| Method| Content Type |Parameters| Description |
 { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" } 
 ```
 ### Return example:
-**True***
+**True**
 ```javascript
 {
     "succes": true,
@@ -42,7 +42,7 @@ Route| Method| Content Type |Parameters| Description |
 }
 ```
 
-**False***
+**False**
 ```javascript
 {
     "succes": true,
