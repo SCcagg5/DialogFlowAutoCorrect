@@ -15,7 +15,7 @@ Route| Method| Content Type |Parameters| Description |
 **True**
 ```javascript
 {
-    "suces": true,
+    "succes": true,
     "queryInfos": {
         "route": "/correct/",
         "params": {
