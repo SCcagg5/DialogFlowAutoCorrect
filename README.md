@@ -18,7 +18,7 @@ Route| Method| Content Type |Parameters|
 * To get correction for the first exercice, your `EXERCICE_NUMBER` will be `1`
 
 ## crul exemple
-```
+```shell
 curl -X POST http://localhost:5000/correct/ 
         -H 'Content-Type: application/json' 
         -d '{ 
