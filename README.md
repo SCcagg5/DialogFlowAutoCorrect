@@ -5,7 +5,7 @@
 Route| Method| Content Type |Parameters| Description |
 -----|-------|--------------|----------|-|
 /test/ | POST, GET |  |  | return an empty response pattern
-/correct/ | POST | JSON | bearer, exercice| return data **waited** and **got** until error if there is one, and succes status `True` / `False`
+/correct/ | POST | JSON | bearer, exercice| return data **waited** and **got** until error if there is one
 
 ### Parameters:
 ```javascript
