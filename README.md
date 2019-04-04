@@ -9,7 +9,7 @@ Route| Method| Content Type |Parameters|
 
 Launching the App|
 --|
- `docker build -t *dialogCorrect_img*` . |
+ `docker build -t *dialogCorrect_img* .` |
  `docker run --detach --name *dialogCorrect* -p*5000*:5000 -it *dialogCorrect_img*`|
 
 
