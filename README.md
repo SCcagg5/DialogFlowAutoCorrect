@@ -20,7 +20,7 @@ Route| Method| Content Type |Parameters| Description |
         "route": "/correct/",
         "params": {
             "exercice": "1",
-            "bearer": "2f5583ceb8904df4a35d434a139709b2"
+            "bearer": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         }
     },
     "error": null,
@@ -50,7 +50,7 @@ Route| Method| Content Type |Parameters| Description |
         "route": "/correct/",
         "params": {
             "exercice": "1",
-            "bearer": "2f5583ceb8904df4a35d434a139709b2"
+            "bearer": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
         }
     },
     "error": null,
