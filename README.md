@@ -4,7 +4,10 @@
   
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
-/correct/ | POST | JSON | ```javascript { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" } ```|
+/correct/ | POST | JSON | bearer && exercice|
+```javascript 
+{ "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" } 
+```
 
 
 ## Launching the App:  
