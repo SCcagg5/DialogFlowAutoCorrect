@@ -1,5 +1,6 @@
 import requests
 import json as JSON
+import urllib
 
 class dialogflowapi:
     def __init__(self, bearer = None):
@@ -39,7 +40,7 @@ class dialogflowapi:
     def __query(self, lang, query, id):
         url = "https://api.dialogflow.com/v1/query?v=20150910"
         url += "&lang=" + str(lang)
-        url += "&query=" + str(query)
+        url += "&query=" + urllib.urlencode(query)
         url += "&sessionId=" + str(id)
         res = requests.get(url, headers={'Authorization': 'Bearer ' + self.bearer})
         if res.status_code != 200:
