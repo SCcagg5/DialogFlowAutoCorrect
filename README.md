@@ -5,7 +5,9 @@
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
 /correct/ | POST | JSON | bearer && exercice|
-```javascript 
+
+### Parameters:
+```Perl
 { "bearer" : "*YOUR_DIALOGFLOW_BEARER*","exercice": "*EXERCICE_NUMBER*" } 
 ```
 
