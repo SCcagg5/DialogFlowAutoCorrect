@@ -40,7 +40,7 @@ class dialogflowapi:
     def __query(self, lang, query, id):
         url = "https://api.dialogflow.com/v1/query?v=20150910"
         url += "&lang=" + str(lang)
-        url += "&query=" + urllib.parse.urlencode(query)
+        url += "&" + urllib.parse.urlencode({"query"=query})
         url += "&sessionId=" + str(id)
         res = requests.get(url, headers={'Authorization': 'Bearer ' + self.bearer})
         if res.status_code != 200:
