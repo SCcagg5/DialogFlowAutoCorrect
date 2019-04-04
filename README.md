@@ -4,7 +4,7 @@
   
 Route| Method| Content Type |Parameters|
 -----|-------|--------------|----------|
-/correct/ | POST | JSON | bearer && exercice|
+/correct/ | POST | JSON | bearer, exercice|
 
 ### Parameters:
 ```javascript
