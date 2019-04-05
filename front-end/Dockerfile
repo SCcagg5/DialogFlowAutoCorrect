@@ -12,4 +12,4 @@ RUN mkdir /home/front
 ENTRYPOINT cd /home/front/ && \
 	   git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
 	   cd ./DialogFlowAutoCorrect/front-end/src && \
-	   http-server ./
+	   http-server ./ && /bin/bash
