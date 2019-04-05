@@ -1,4 +1,4 @@
-FROM debian:jessie AS BACK_DFC
+FROM debian:jessie AS FRONT_DFC
 
 MAINTAINER Courtel Eliot <eliot.courtel@wanadoo.fr>
 
