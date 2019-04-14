@@ -5,6 +5,7 @@ from params import check
 from dialogflow import dialogflowapi
 from exercice import exercice_maker
 import uuid
+import os
 
 """route to test if api is up"""
 @get('/test/')
