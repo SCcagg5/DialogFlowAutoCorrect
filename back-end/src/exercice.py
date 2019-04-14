@@ -35,6 +35,7 @@ class exercice_maker:
                     if arr[n][n2] is not "":
                         t[lang][key][n].append(arr[n][n2])
                 n2 += 1
+            n += 1
         return [True, t, None]
 
     def uploader(self, arr):
