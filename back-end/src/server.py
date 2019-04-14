@@ -42,6 +42,10 @@ def base():
 
 @post('/add_exo/')
 def base():
+    try:
+        params = check.json(request)
+    except:
+        params = []
     toret = ret(request.route.rule, params)
 
     upload = request.files.get('upload')
