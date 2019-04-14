@@ -30,7 +30,7 @@ class exercice_maker:
                     if lang not in t:
                         t[lang] = {"queries":[], "waited":[], "value":[]}
                 else:
-                    if len(t[lang][key]) < n:
+                    if len(t[lang][key]) < (n + 1):
                         t[lang][key].append([])
                     if i2 is not "":
                         t[lang][key][n].append(i2)
