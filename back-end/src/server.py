@@ -41,12 +41,9 @@ def base():
 
     return toret.ret()
 
-@post('/add_exo/')
-def base():
-    try:
-        params = check.json(request)
-    except:
-        params = []
+@post('/add_exo/<mail>/<name>/')
+def base(mail, name):
+    params = {"mail": mail, "name": name}
     toret = ret(request.route.rule, params)
     upload = request.files.get('upload')
 
