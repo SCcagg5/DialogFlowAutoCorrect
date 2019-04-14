@@ -9,8 +9,8 @@ class exercice_maker:
         self.name = name
 
     def csv_to_arr(self, csv):
-        data = str(csv.file.read())
-        data = data.split("\\r\\n")[2:]
+        data = str(csv.file.read())[2:-1]
+        data = data.split("\\r\\n")
         n = 0
         for i in data:
             data[n] = data[n].split(',')
