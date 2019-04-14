@@ -53,7 +53,7 @@ def base():
     name, ext = os.path.splitext(upload.filename)
     if ext not in ('.csv'):
         toret.add_error("Invalid file extension '" + ext + "'" , 401)
-    toret.add_data(upload)
+    print(upload)
     return toret.ret()
 
     if not toret.err:
