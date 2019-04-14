@@ -18,7 +18,24 @@ class exercice_maker:
         return [True, data, None]
 
     def checker(self, arr):
-        return [True, arr, None]
+        n = 0
+        t = {}
+        for i in arr[1:]:
+            n2 = 0
+            lang = ""
+            for i2 in i:
+                key = arr[0][n2]
+                if key == "lang":
+                    lang = arr[n][n2] if arr[n][n2] is not "" else lang
+                    if t[lang] is None:
+                        t[lang] = {"queries":[], "waited":[], "value":[]}
+                else:
+                    if t[lang][key][n] is None:
+                        t[lang][key][n] = []
+                    if arr[n][n2] is not "":
+                        t[lang][key][n].append(arr[n][n2])
+                n2 += 1
+        return [True, t, None]
 
     def uploader(self, arr):
         return [True, arr, None]
