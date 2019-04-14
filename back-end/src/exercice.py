@@ -19,7 +19,7 @@ class exercice_maker:
 
     def checker(self, arr):
         n = 0
-        t = {"fr": {}, "en": {}}
+        t = {}
         for i in arr[1:]:
             n2 = 0
             lang = ""
@@ -27,6 +27,7 @@ class exercice_maker:
                 key = arr[0][n2]
                 if key == "lang":
                     lang = arr[n][n2] if arr[n][n2] is not "" else lang
+                    print(lang)
                     if t[lang] is None:
                         t[lang] = {"queries":[], "waited":[], "value":[]}
                 else:
