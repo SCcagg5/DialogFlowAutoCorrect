@@ -74,7 +74,7 @@ def base():
             toret.add_error(err[1], err[2])
 
     if not toret.err:
-        err = exm.uploader(err[1]))
+        err = exm.uploader(err[1])
         if not err[0]:
             toret.add_error(err[1], err[2])
         else:
