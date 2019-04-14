@@ -48,13 +48,14 @@ def base():
     except:
         params = []
     toret = ret(request.route.rule, params)
-
     upload = request.files.get('upload')
-    name, ext = os.path.splitext(upload.filename)
-    if ext not in ('.csv'):
-        toret.add_error("Invalid file extension '" + ext + "'" , 401)
-    print(upload.file.read())
-    return toret.ret()
+
+    if upload is None:
+        toret.add_error("Missing parameter : upload", 401)
+    if not toret.err:
+        name, ext = os.path.splitext(upload.filename)
+        if ext not in ('.csv'):
+            toret.add_error("Invalid file extension '" + ext + "'" , 401)
 
     if not toret.err:
         err = check.contain(params, ["mail", "name"])
@@ -62,13 +63,24 @@ def base():
             toret.add_error(err[1], err[2])
 
     if not toret.err:
-        df = dialogflowapi(params["bearer"])
-        err = df.test(params["exercice"])
+        exm = exercice_maker(str(uuid.uuid4()), params["mail"], params["name"])
+        err = exm.csv_to_arr(upload)
+        if not err[0]:
+            toret.add_error(err[1], err[2])
+
+    if not toret.err:
+        err = exm.checker(err[1])
+        if not err[0]:
+            toret.add_error(err[1], err[2])
+
+    if not toret.err:
+        err = exm.uploader(err[1]))
         if not err[0]:
             toret.add_error(err[1], err[2])
         else:
             toret.add_data(err[1])
-    str(uuid.uuid4())
+
+    return toret.ret()
 
 
 if __name__ == '__main__':
