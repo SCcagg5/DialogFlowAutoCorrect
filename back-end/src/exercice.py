@@ -26,15 +26,14 @@ class exercice_maker:
             for i2 in i:
                 key = arr[0][n2]
                 if key == "lang":
-                    lang = arr[n][n2] if arr[n][n2] is not "" else lang
-                    print(lang)
-                    if t[lang] is None:
+                    lang = i2 if i2 is not "" else lang
+                    if lang not in t:
                         t[lang] = {"queries":[], "waited":[], "value":[]}
                 else:
                     if t[lang][key][n] is None:
                         t[lang][key][n] = []
-                    if arr[n][n2] is not "":
-                        t[lang][key][n].append(arr[n][n2])
+                    if i2 is not "":
+                        t[lang][key][n].append(i2)
                 n2 += 1
             n += 1
         return [True, t, None]
