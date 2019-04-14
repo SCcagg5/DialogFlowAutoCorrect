@@ -19,7 +19,7 @@ class exercice_maker:
 
     def checker(self, arr):
         n = 0
-        t = {}
+        t = {"fr": {}, "en": {}}
         for i in arr[1:]:
             n2 = 0
             lang = ""
