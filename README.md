@@ -122,11 +122,11 @@ Route| Method| Content Type |Parameters| Description |
 * To get correction for the first exercice, your `EXERCICE_NUMBER` will be `354b876f4b404af2abc6e0b0d6b06f45`
 * To upload a new exercice it'll have to be formated:
 
-  #|lang|queries|queries|queries|waited|waited|waited|value|value|value|
-  -|-|-|-|-|-|-|-|-|-|-|
-  1st test |your_lang | query_1 | query_2 | query_3 | waited_pos1 |waited_pos2|waited_pos3|value_get1|value_get2|value_get3|
+  #|lang|queries|queries|waited|waited|value|
+  -|-|-|-|-|-|-|
+  1st test |your_lang | query_1 | query_2 | waited_pos1 |waited_pos2|value_get1|
   
-  - *Here when inputing to dialogflow in language `yourlang` (*'fr'* / *'us'*) dialogflow will expect one of the waited possibilities and all value set to be retrieve*
+  - *Here when inputing to dialogflow in language `your_lang` ('fr' / 'us') dialogflow will expect one of the waited possibilities and all value set to be retrieve*
   - *You can leave queries, waited and value empty to not be computed*
   - *One lang column, as many queries, waited, value as you want*
 
