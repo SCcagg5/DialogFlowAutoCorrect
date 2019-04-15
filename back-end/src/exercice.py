@@ -42,8 +42,8 @@ class exercice_maker:
         return [True, t, None]
 
     def uploader(self, arr):
-        completeName = os.path.join("home/DialogFlowModule/", self.namefile)
-        file1 = open(completeName, "w")
+        completeName = os.path.join("/home/DialogFlowModule/", self.namefile)
+        file1 = open(completeName, "w+")
         file1.write(JSON.dumps(arr))
         file1.close()
         repo = Repo("/home/DialogFlowModule/.git")
