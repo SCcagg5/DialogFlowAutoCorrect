@@ -134,7 +134,7 @@ Route| Method| Content Type |Parameters| Description |
   - *You can leave queries, waited and value empty to not be computed*
   - *One lang column, as many queries, waited, value as you want*
 
-## crul exemple
+## Curl examples
 ```shell
 curl -X POST http://localhost:5000/correct/ 
         -H 'Content-Type: application/json' 
