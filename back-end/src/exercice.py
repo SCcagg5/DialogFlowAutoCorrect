@@ -1,12 +1,15 @@
 import requests
 import json as JSON
 import urllib
+import os
+from git import Repo
 
 class exercice_maker:
     def __init__(self, num, mail, name):
         self.num = num
         self.mail = mail
         self.name = name
+        self.namefile = "exo" + num + ".json"
 
     def csv_to_arr(self, csv):
         data = str(csv.file.read())[2:-1]
@@ -39,4 +42,13 @@ class exercice_maker:
         return [True, t, None]
 
     def uploader(self, arr):
+        completeName = os.path.join("home/DialogFlowModule/", self.name)
+        file1 = open(completeName, "w")
+        file1.write(JSON.dumps(arr))
+        file1.close()
+        repo = Repo("/home/DialogFlowModule/.git")
+        repo.git.add(self.namefile)
+        repo.index.commit(self.namefile + " added by " + self.name + " <" + self.mail+">")
+        origin = repo.remote(name='origin')
+        origin.push()
         return [True, arr, None]
