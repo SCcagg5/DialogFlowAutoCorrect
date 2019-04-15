@@ -143,7 +143,7 @@ curl -X POST http://localhost:5000/correct/
           "exercice": "EXERCICE_NUMBER"
         }';
 
-curl -X POST 'http://51.158.76.181:3000/add_exo/eliot.courtel@wanadoo,fr/eliot%20courtel/' \
+curl -X POST 'http://localhost:5000/add_exo/eliot.courtel@wanadoo,fr/eliot%20courtel/' \
         -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
         -F 'upload=@C:\Users\Eliot Courtel\Documents\Work\Projets\DialogFlowAutoCorrect\DialogFlowModule\exercice.csv';
 ```
