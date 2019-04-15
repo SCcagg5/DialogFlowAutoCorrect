@@ -121,6 +121,7 @@ Route| Method| Content Type |Parameters| Description |
 * To get More info about available exercice, see here : https://github.com/SCcagg5/DialogFlowModule
 * To get correction for the first exercice, your `EXERCICE_NUMBER` will be `354b876f4b404af2abc6e0b0d6b06f45`
 * To upload a new exercice it'll have to be formated:
+
   #|lang|queries|queries|queries|waited|waited|waited|value|value|value|
   -|-|-|-|-|-|-|-|-|-|-|
   1st test |your_lang | query_1 | query_2 | query_3 | waited_pos1 |waited_pos2|waited_pos3|value_get1|value_get2|value_get3|
