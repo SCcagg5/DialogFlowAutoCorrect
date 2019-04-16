@@ -18,8 +18,7 @@ Route| Method| Content Type |Parameters| Description |
 ```
 ### Return example:
 
-:::succes
-
+<span style="background-color: green">
 **`/correct/` True**
 ```javascript
 {
@@ -49,7 +48,7 @@ Route| Method| Content Type |Parameters| Description |
     "status": 200
 }
 ```
-:::
+</span>
 
 
 :::danger
