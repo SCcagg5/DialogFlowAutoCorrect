@@ -18,7 +18,7 @@ Route| Method| Content Type |Parameters| Description |
 ```
 ### Return example:
 
-<span style="background-color: green">
+<divstyle="background-color: green">
 **`/correct/` True**
 ```javascript
 {
@@ -48,7 +48,7 @@ Route| Method| Content Type |Parameters| Description |
     "status": 200
 }
 ```
-</span>
+</div>
 
 
 :::danger
