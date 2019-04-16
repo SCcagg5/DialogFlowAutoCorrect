@@ -17,6 +17,7 @@ Route| Method| Content Type |Parameters| Description |
 } 
 ```
 ### Return example:
+:::succes
 **`/correct/` True**
 ```javascript
 {
@@ -46,7 +47,10 @@ Route| Method| Content Type |Parameters| Description |
     "status": 200
 }
 ```
+:::
 
+
+:::danger
 **`/correct/` False**
 ```javascript
 {
@@ -76,7 +80,9 @@ Route| Method| Content Type |Parameters| Description |
     "status": 200
 }
 ```
+:::
 
+:::succes
 **`/add_exo/` True**
 ```javascript
 {
@@ -114,6 +120,8 @@ Route| Method| Content Type |Parameters| Description |
     }
 }
 ```
+:::
+
 
 ## Launching the App:  
   
