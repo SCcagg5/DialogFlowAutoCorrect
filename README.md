@@ -17,7 +17,9 @@ Route| Method| Content Type |Parameters| Description |
 } 
 ```
 ### Return example:
+
 :::succes
+
 **`/correct/` True**
 ```javascript
 {
