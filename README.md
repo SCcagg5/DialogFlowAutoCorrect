@@ -18,7 +18,7 @@ Route| Method| Content Type |Parameters| Description |
 ```
 ### Return example:
 
-<divstyle="background-color: green">
+<div style="background-color: green">
 **`/correct/` True**
 ```javascript
 {
