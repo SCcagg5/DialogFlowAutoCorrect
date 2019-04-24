@@ -6,8 +6,10 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
 ### Tech :
  
-  **APP**: Docker|
+  **APP**: Docker
+  
   **FRONT**:VueJS
+  
   **END**:Python3
   
   
