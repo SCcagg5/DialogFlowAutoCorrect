@@ -9,9 +9,7 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
   APP |
   -|
   Docker|
-  Front | END ||
-  -|-||
-  test|test||
+  Front | END |-|-||
 ----------
 
 # Front End:
