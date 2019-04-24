@@ -6,7 +6,7 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
 ### Tech :
  
-  * **APP**<span>   </span>: Docker
+  * **APP**&nbsp&nbsp&nbsp&nbsp&nbsp: Docker
   * **FRONT**<p> </p>: VueJS
   * **END**<p>   </p>: Python3
   
