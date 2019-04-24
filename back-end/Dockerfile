@@ -8,10 +8,9 @@ RUN apt-get install nodejs build-essential -y
 RUN npm install -g pm2
 RUN apt-get install python3 python3-pip -y
 RUN apt-get install git -y
-RUN mkdir /home/api
+RUN mkdir /home/api/
 
-ENTRYPOINT cd /home/api/ && \
-	   git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
+ENTRYPOINT cd /home/api && git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
 	   cd ./DialogFlowAutoCorrect/back-end/src && \
-	   cat dependencies.txt | while read ligne; do pip3 install $ligne ; done \
-	   && pm2 start --interpreter python3 server.py && /bin/bash
+	   pip3 install -r dependencies.txt > /dev/null && \
+	   pm2 start --interpreter python3 server.py & > /dev/null && /bin/bash

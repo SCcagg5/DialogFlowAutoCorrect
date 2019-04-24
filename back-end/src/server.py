@@ -81,4 +81,7 @@ def base(mail, name):
 
 
 if __name__ == '__main__':
-        run(host='0.0.0.0', port=5000)
+        try:
+            run(host='0.0.0.0', port=8080)
+        except:
+            os._exit(0)

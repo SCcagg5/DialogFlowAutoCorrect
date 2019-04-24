@@ -1,7 +1,7 @@
 # **DialogFlow** unary tests app
 
 ## Route:  
-  
+
 Route| Method| Content Type |Parameters| Description |
 -----|-------|--------------|----------|-|
 /test/ | POST, GET |  |  | return an empty response pattern
@@ -10,11 +10,11 @@ Route| Method| Content Type |Parameters| Description |
 
 ### Parameters:
 ```javascript
-{ 
+{
   "bearer" : "*YOUR_DIALOGFLOW_BEARER*",
   "exercice": "*EXERCICE_NUMBER*",
   "upload": YOUR_FILE.csv
-} 
+}
 ```
 ### Return example:
 
@@ -119,10 +119,10 @@ Route| Method| Content Type |Parameters| Description |
 
 
 ## Launching the App:  
-  
+
 
  * `docker build -t dialogCorrect_img .`
- * `docker run --detach --name dialogCorrect -p5000:5000 -it dialogCorrect_img`
+ * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogCorrect_img`
 
 ## More
 * To get More info about available exercice, see here : https://github.com/SCcagg5/DialogFlowModule
@@ -132,17 +132,17 @@ Route| Method| Content Type |Parameters| Description |
   #|lang|queries|queries|waited|waited|value|
   -|-|-|-|-|-|-|
   1st test |your_lang | query_1 | query_2 | waited_pos1 |waited_pos2|value_get1|
-  
+
   - *Here when inputing to dialogflow in language `your_lang` ('fr' / 'us') dialogflow will expect one of the waited possibilities and all value set to be retrieve*
   - *You can leave queries, waited and value empty to not be computed*
   - *One lang column, as many queries, waited, value as you want*
 
 ## Curl examples
 ```shell
-curl -X POST http://localhost:5000/correct/ 
-        -H 'Content-Type: application/json' 
-        -d '{ 
-          "bearer" : "YOUR_DIALOGFLOW_BEARER", 
+curl -X POST http://localhost:5000/correct/
+        -H 'Content-Type: application/json'
+        -d '{
+          "bearer" : "YOUR_DIALOGFLOW_BEARER",
           "exercice": "EXERCICE_NUMBER"
         }';
 
