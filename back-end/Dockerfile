@@ -8,10 +8,19 @@ RUN apt-get install nodejs build-essential -y
 RUN npm install -g pm2
 RUN apt-get install python3 python3-pip -y
 RUN apt-get install git -y
+RUN pip3 install requests bottle gitpython
+RUN apt-get install openssh-client
 RUN mkdir /home/api
+RUN apt-get install nano
 
 ENTRYPOINT cd /home/api/ && \
 	   git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
-	   cd ./DialogFlowAutoCorrect/back-end/src && \
-	   cat dependencies.txt | while read ligne; do pip3 install $ligne ; done \
-	   && pm2 start --interpreter python3 server.py && /bin/bash
+	   cd ./DialogFlowAutoCorrect/back-end/src && pm2 start --interpreter python3 server.py &&\
+	   cd /home/ &&\
+	   git clone https://github.com/SCcagg5/DialogFlowModule && \
+	   cd DialogFlowModule && git config --global credential.helper store && \
+	   git config --global user.email "sccagg5@gmail.com" &&\
+	   git config --global user.name "API" &&\
+	   git config --global push.default matching &&\
+	   git commit -m "initialisation";\
+	   /bin/bash
