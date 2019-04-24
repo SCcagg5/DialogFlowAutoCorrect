@@ -6,9 +6,11 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
 ### Tech :
 
-     |**APP** |
-     |-|
-     |Docker|
+<p align="center"> 
+  |**APP** |
+  |-|
+  |Docker|
+</p>
   
   |**FRONT**|**END**|
   |-|-| 
