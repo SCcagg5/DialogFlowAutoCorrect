@@ -6,13 +6,15 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
 ### Tech :
 
-  |**APP** |
-  |-|
-  |Docker|
+     |**APP** |
+     |-|
+     |Docker|
   
   |**FRONT**|**END**|
   |-|-| 
   |VueJS|Python3|
+  
+  
 ----------
 
 # Front End:
