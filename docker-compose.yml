@@ -7,6 +7,10 @@ services:
             - 5000:8080
           tty: true
           stdin_open: true
+          environment:
+            - PROD=0
+          volumes:
+            - ./:/home/api/DialogFlowAutoCorrect
 
         frt-end:
           build: ./front-end
