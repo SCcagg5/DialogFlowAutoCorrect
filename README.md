@@ -5,14 +5,13 @@
 To launch the app use: `docker-compose up -d --build` from inside the git directory
 
 ### Tech :
-
-  APP |
-  -|
-  Docker|
-  Front | END ||
-  -|-||
-  test|test||
-----------
+ 
+  * **APP**: Docker
+  * **FRONT**: VueJS
+  * **END**: Python3
+  
+  
+---
 
 # Front End:
 
@@ -24,7 +23,7 @@ From inside the `front-end` dir:
  * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogcorrect_front_img`
 
 
-------
+---
 
 # Back end:
 
