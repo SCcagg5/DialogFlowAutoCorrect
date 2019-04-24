@@ -15,12 +15,12 @@ RUN apt-get install nano
 
 ENTRYPOINT cd /home/api/ && \
 	   git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
-	   cd ./DialogFlowAutoCorrect/back-end/src && pm2 start --interpreter python3 server.py &&\
-	   cd /home/ &&\
-	   git clone https://github.com/SCcagg5/DialogFlowModule && \
-	   cd DialogFlowModule && git config --global credential.helper store && \
-	   git config --global user.email "sccagg5@gmail.com" &&\
-	   git config --global user.name "API" &&\
-	   git config --global push.default matching &&\
-	   git commit -m "initialisation";\
+	   cd ./DialogFlowAutoCorrect/back-end/src && pm2 start --interpreter python3 server.py --watch > /dev/null & > /dev/null;\
+	   cd /home/ > /dev/null &&\
+	   git clone https://github.com/SCcagg5/DialogFlowModule > /dev/null && \
+	   cd DialogFlowModule && git config --global credential.helper store > /dev/null && \
+	   git config --global user.email "sccagg5@gmail.com" > /dev/null &&\
+	   git config --global user.name "API" > /dev/null &&\
+	   git config --global push.default matching > /dev/null &&\
+	   git commit -m "initialisation" > /dev/null ;\
 	   /bin/bash

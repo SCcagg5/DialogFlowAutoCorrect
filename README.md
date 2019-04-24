@@ -1,5 +1,33 @@
 # **DialogFlow** unary tests app
 
+# The App:
+
+To launch the app use: `docker-compose up -d --build` from inside the git directory
+
+### Tech :
+
+  APP |
+  -|
+  Docker|
+  Front | END ||
+  -|-||
+  test|test||
+----------
+
+# Front End:
+
+## Launching the App:
+
+From inside the `front-end` dir:
+
+ * `docker build -t dialogcorrect_front_img .`
+ * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogcorrect_front_img`
+
+
+------
+
+# Back end:
+
 ## Route:  
 
 Route| Method| Content Type |Parameters| Description |
@@ -16,113 +44,13 @@ Route| Method| Content Type |Parameters| Description |
   "upload": YOUR_FILE.csv
 }
 ```
-### Return example:
-
-**`/correct/` True**
-```javascript
-{
-    "succes": true,
-    "queryInfos": {
-        "route": "/correct/",
-        "params": {
-            "exercice": "354b876f4b404af2abc6e0b0d6b06f45",
-            "bearer": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-        }
-    },
-    "error": null,
-    "data": {
-        "succes": true,
-        "got": [
-            "Bonjour !"
-        ],
-        "waited": [
-            [
-                "Bienvenue !",
-                "Salutations !",
-                "Salut !",
-                "Bonjour !"
-            ]
-        ]
-    },
-    "status": 200
-}
-```
-
-**`/correct/` False**
-```javascript
-{
-    "succes": true,
-    "queryInfos": {
-        "route": "/correct/",
-        "params": {
-            "exercice": "354b876f4b404af2abc6e0b0d6b06f45",
-            "bearer": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-        }
-    },
-    "error": null,
-    "data": {
-        "succes": false,
-        "got": [
-            "Hello"
-        ],
-        "waited": [
-            [
-                "Bienvenue !",
-                "Salutations !",
-                "Salut !",
-                "Bonjour !"
-            ]
-        ]
-    },
-    "status": 200
-}
-```
-
-
-**`/add_exo/` True**
-```javascript
-{
-    "succes": true,
-    "status": 200,
-    "error": null,
-    "queryInfos": {
-        "params": {
-            "name": "eliot courtel"
-        },
-        "route": "/add_exo/<mail>/<name>/"
-    },
-    "data": {
-        "link": "https://github.com/SCcagg5/DialogFlowModule/blob/master/exo354b876f4b404af2abc6e0b0d6b06f45.json",
-        "number": "354b876f4b404af2abc6e0b0d6b06f45",
-        "exercice": {
-            "fr": {
-                "value": [],
-                "queries": [
-                    [
-                        "Bonjour",
-                        "Salut"
-                    ]
-                ],
-                "waited": [
-                    [
-                        "Bienvenue !",
-                        "Salutations !",
-                        "Salut !",
-                        "Bonjour !"
-                    ]
-                ]
-            }
-        }
-    }
-}
-```
-
 
 ## Launching the App:  
 
+From inside the `back-end` dir:
 
- * `docker build -t dialogCorrect_img .`
- * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogCorrect_img`
+ * `docker build -t dialogcorrect_back_img .`
+ * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogcorrect_back_img`
 
 ## More
 * To get More info about available exercice, see here : https://github.com/SCcagg5/DialogFlowModule
@@ -136,17 +64,3 @@ Route| Method| Content Type |Parameters| Description |
   - *Here when inputing to dialogflow in language `your_lang` ('fr' / 'us') dialogflow will expect one of the waited possibilities and all value set to be retrieve*
   - *You can leave queries, waited and value empty to not be computed*
   - *One lang column, as many queries, waited, value as you want*
-
-## Curl examples
-```shell
-curl -X POST http://localhost:5000/correct/
-        -H 'Content-Type: application/json'
-        -d '{
-          "bearer" : "YOUR_DIALOGFLOW_BEARER",
-          "exercice": "EXERCICE_NUMBER"
-        }';
-
-curl -X POST 'http://localhost:5000/add_exo/mail/name/' \
-        -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
-        -F 'upload=@YOUR_FILE.csv';
-```
