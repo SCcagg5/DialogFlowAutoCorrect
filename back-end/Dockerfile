@@ -12,5 +12,5 @@ RUN mkdir /home/api/
 
 ENTRYPOINT cd /home/api && git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
 	   cd ./DialogFlowAutoCorrect/back-end/src && \
-	   pip3 install -r dependencies.txt > /dev/null && \
+	   pip3 install -r dependencies.txt && \
 	   python3 server.py & > /dev/null && /bin/bash
