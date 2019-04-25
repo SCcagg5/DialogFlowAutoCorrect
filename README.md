@@ -36,7 +36,7 @@ From inside the `front-end` dir:
 ## Route:  
 
 Route| Method| Content Type |Parameters| Description |
------|-------|--------------|----------|-|
+:-|:-:|:-|:-:|:-|
 /test/ | POST, GET |  |  | return an empty response pattern
 /correct/ | POST | JSON | bearer, exercice| return data **waited** and **got** until error if there is one
 /add_exo/\<mail\>/\<name\>/ | POST | multipart | upload | return **upload** converterd into exercice array, link to git uploaded version and exercice number
@@ -63,7 +63,7 @@ From inside the `back-end` dir:
 * To upload a new exercice it'll have to be formated:
 
   #|lang|queries|queries|waited|waited|value|
-  -|-|-|-|-|-|-|
+  :-:|:-:|:-:|:-:|:-:|:-:|:-:|
   1st test |your_lang | query_1 | query_2 | waited_pos1 |waited_pos2|value_get1|
 
   - *Here when inputing to dialogflow in language `your_lang` ('fr' / 'us') dialogflow will expect one of the waited possibilities and all value set to be retrieve*
