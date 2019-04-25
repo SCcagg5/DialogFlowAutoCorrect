@@ -5,8 +5,8 @@
 To launch the app use: `docker-compose up -d --build` from inside the git directory
 
  * *There is two mode **PROD** and **DEV** :*
-   * '**PROD** clone and run the actual git repo'
-   * '**DEV** is using your locals files to run'
+   * _**PROD** clone and run the actual git repo_
+   * _**DEV** is using your locals files to run_
  * *By default, the mode is set to **PROD** in the `docker-compose.yml` file to change it change `- PROD=1` to `- PROD=0`*
 
 
