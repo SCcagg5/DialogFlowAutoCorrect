@@ -14,7 +14,7 @@ RUN mkdir /home/api
 RUN apt-get install nano
 
 ENTRYPOINT cd /home/api/ && \
-	   if ["$PROD" -eq 1]; then rm -r DialogFlowAutoCorrect; git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null; fi && \
+	   if [ "$PROD" -eq 1 ]; then rm -r DialogFlowAutoCorrect/back-end; mkdir tmp; cd tmp; git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null; cd ..; mv tmp/DialogFlowAutoCorrect/back-end DialogFlowAutoCorrect/back-end; fi && \
 	   cd ./DialogFlowAutoCorrect/back-end/src && pm2 start --interpreter python3 server.py --watch > /dev/null & > /dev/null;\
 	   cd /home/ > /dev/null &&\
 	   git clone https://github.com/SCcagg5/DialogFlowModule > /dev/null && \
