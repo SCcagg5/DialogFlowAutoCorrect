@@ -1,4 +1,5 @@
 # **DialogFlow** unary tests app
+---
 
 # The App:
 
@@ -21,7 +22,7 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
 # Front End:
 
-## Launching the App:
+### Launching the App:
 
 From inside the `front-end` dir:
 
@@ -33,7 +34,7 @@ From inside the `front-end` dir:
 
 # Back end:
 
-## Route:  
+### Route:  
 
 Route| Method| Content Type |Parameters| Description |
 :-|:-:|:-:|:-:|:-|
@@ -50,14 +51,17 @@ Route| Method| Content Type |Parameters| Description |
 }
 ```
 
-## Launching the App:  
+### Launching the App:  
 
 From inside the `back-end` dir:
 
  * `docker build -t dialogcorrect_back_img .`
  * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogcorrect_back_img`
 
-## More
+---
+
+# More
+
 * To get More info about available exercice, see here : https://github.com/SCcagg5/DialogFlowModule
 * To get correction for the first exercice, your `EXERCICE_NUMBER` will be `354b876f4b404af2abc6e0b0d6b06f45`
 * To upload a new exercice it'll have to be formated:
