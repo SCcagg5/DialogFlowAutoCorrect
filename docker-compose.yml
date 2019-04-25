@@ -8,7 +8,7 @@ services:
           tty: true
           stdin_open: true
           environment:
-            - PROD=0
+            - PROD=1
           volumes:
             - ./:/home/api/DialogFlowAutoCorrect
 
