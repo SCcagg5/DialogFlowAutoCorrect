@@ -27,7 +27,7 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 From inside the `front-end` dir:
 
  * `docker build -t dialogcorrect_front_img .`
- * `docker run --detach --name dialogCorrect -p5000:8080 -it dialogcorrect_front_img`
+ * `docker run --detach --name dialogcorrect -p80:8080 -it dialogcorrect_front_img`
 
 
 ---
