@@ -10,6 +10,6 @@ RUN apt-get install git -y
 RUN mkdir /home/front
 
 ENTRYPOINT cd /home/front/ && \
-	   git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null && \
+	   if [ "$PROD" -eq 1 ];then mkdir prod; cd prod; git clone --quiet https://github.com/SCcagg5/DialogFlowAutoCorrect > /dev/null; fi && \
 	   cd ./DialogFlowAutoCorrect/front-end/src && \
 	   http-server ./ && /bin/bash
