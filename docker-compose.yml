@@ -8,11 +8,15 @@ services:
           tty: true
           stdin_open: true
           environment:
-            - PROD=0
+            - PROD=1
           volumes:
             - ./:/home/api/DialogFlowAutoCorrect
 
         frt-end:
           build: ./front-end
+          environment:
+            - PROD=0
           ports:
             - 80:8080
+          volumes:
+            - ./:/home/front/DialogFlowAutoCorrect
