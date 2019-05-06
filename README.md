@@ -13,6 +13,11 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
    * _**DEV** is using your locals files to run_
  * *By default, the mode is set to **PROD** in the `docker-compose.yml` file, to change it set `- PROD=1` to `- PROD=0`*
 
+### Next features:
+
+ * Add variable value check
+ * Return error code
+ * error code doc
 
 ### Tech :
  
