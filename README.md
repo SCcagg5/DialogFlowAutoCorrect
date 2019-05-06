@@ -4,6 +4,8 @@
 [![codebeat badge](https://codebeat.co/badges/d6039fda-1105-46b6-8edc-9583b6d697b4)](https://codebeat.co/projects/github-com-sccagg5-dialogflowautocorrect-master)
 [![BCH compliance](https://bettercodehub.com/edge/badge/SCcagg5/DialogFlowAutoCorrect?branch=master)](https://bettercodehub.com/)
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/eliotctl/dialogflowautocorrect-back.svg?label=docker%20back-end)
+
 # The App:
 
 To launch the app use: `docker-compose up -d --build` from inside the git directory
