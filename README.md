@@ -2,6 +2,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/sccagg5/dialogflowautocorrect/badge)](https://www.codefactor.io/repository/github/sccagg5/dialogflowautocorrect)
 [![codebeat badge](https://codebeat.co/badges/d6039fda-1105-46b6-8edc-9583b6d697b4)](https://codebeat.co/projects/github-com-sccagg5-dialogflowautocorrect-master)
+[![BCH compliance](https://bettercodehub.com/edge/badge/SCcagg5/DialogFlowAutoCorrect?branch=master)](https://bettercodehub.com/)
 
 # The App:
 
