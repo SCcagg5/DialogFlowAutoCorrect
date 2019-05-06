@@ -3,9 +3,9 @@ FROM debian:jessie AS BACK_DFC
 LABEL maintainer="Courtel Eliot"
 LABEL maintainermail="eliot.courtel@wanadoo.fr"
 
-RUN apt-get update --no-install-recommends && apt-get install curl -y --no-install-recommends && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install curl -y
 RUN cd ~ && curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install nodejs build-essential -y --no-install-recommends
+RUN apt-get install nodejs build-essential -y
 RUN npm install -g pm2
 RUN apt-get install python3 python3-pip -y --no-install-recommends
 RUN apt-get install git -y --no-install-recommends
