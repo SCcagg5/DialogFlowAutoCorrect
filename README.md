@@ -17,6 +17,7 @@ To launch the app use: `docker-compose up -d --build` from inside the git direct
 
  * Add variable value check
  * Return error code
+ * Add setting file
  * error code doc
 
 ### Tech :
