@@ -50,37 +50,43 @@
 		<!-- MAIN -->
 		<div class="main">
 			<!-- MAIN CONTENT -->
-			<div class="main-content">
+			<div class="main-content" id="app">
 				<div class="container-fluid">
-					<h3 class="page-title">Corrector</h3>
 					<div class="row">
 						<div class="col-md-12">
 							<!-- PANEL HEADLINE -->
 							<div class="panel panel-headline">
-								<div class="panel-heading">
-									<h3 class="panel-title">DialogFlow Autocorrect</h3>
-									<p class="panel-subtitle">Last exercice tried:  <span class="label label-danger">FAIL</span><span class="label label-default">NONE</span><span class="label label-success">SUCCESS</span></p>
-								</div>
 								<div class="panel-body">
-									<div class="row">
-										<div class="col-md-4" style="margin-top: 10px">
-											<input class="form-control" placeholder="Exercice Number" type="text">
-										</div>
-										<div class="col-md-4" style="margin-top: 10px">
-											<div class="input-group">
-												<input class="form-control" placeholder="DialogFlowBearer" type="text">
-												<span class="input-group-btn"><button class="btn btn-primary" type="button">Go!</button></span>
+									<h3 class="panel-title" style="font-size: 24px">DialogFlow Autocorrect</h3>
+									<p class="panel-subtitle">
+										<div class="row">
+											<div class="col-md-4" style="margin-top: 17px">Last exercice tried: {{ lastexo }}
+												<span v-if="success == false" class="label label-danger">FAIL</span>
+												<span v-if="success == null" class="label label-default">NONE</span>
+												<span v-if="success == true" class="label label-success">SUCCESS</span>
+											</div>
+											<div class="col-md-4" style="margin-top: 10px">
+												<input class="form-control" placeholder="Exercice Number" type="text" v-bind:input="lastexo" v-model="lastexo">
+											</div>
+											<div class="col-md-4" style="margin-top: 10px">
+												<div class="input-group">
+													<input class="form-control" placeholder="DialogFlowBearer" type="text" v-bind:input="bearer" v-model="bearer">
+													<span class="input-group-btn">
+														<button class="btn btn-primary" type="button" v-on:click="correct()">Go!</button>
+													</span>
+												</div>
 											</div>
 										</div>
-									</div>
+									</p>
 								</div>
+
 							</div>
 							<!-- END PANEL HEADLINE -->
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-						<div class="panel">
+						<div class="panel" v-if="error">
 							<div class="panel-heading">
 								<h3 class="panel-title">Return</h3>
 								<div class="right">
@@ -89,7 +95,7 @@
 								</div>
 							</div>
 							<div class="panel-body no-padding text-center" style="display: block;">
-
+								{{ error }}
 							</div>
 						</div>
 						<div class="panel">
@@ -152,5 +158,8 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="./js/app.js"></script>
 </body>
 </html>

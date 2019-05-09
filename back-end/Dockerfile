@@ -9,8 +9,8 @@ RUN apt-get install nodejs build-essential -y
 RUN npm install -g pm2
 RUN apt-get install python3 python3-pip -y --no-install-recommends
 RUN apt-get install git -y --no-install-recommends
-RUN pip3 install requests bottle uuid
-RUN easy_install3 -U pip 
+RUN pip3 install requests bottle uuid gitpython
+RUN easy_install3 -U pip
 RUN pip install google-cloud-language
 RUN apt-get install openssh-client -y --no-install-recommends
 RUN mkdir /home/api

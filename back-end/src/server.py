@@ -7,8 +7,20 @@ from exercice import exercice_maker
 import uuid
 import os
 
-@get('/test/')
-@post('/test/')
+app = Bottle()
+
+@app.hook('after_request')
+def enable_cors():
+    """
+    You need to add some headers to each request.
+    Don't use the wildcard '*' for Access-Control-Allow-Origin in production.
+    """
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'PUT, GET, POST, DELETE, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
+
+@app.get('/test/')
+@app.post('/test/')
 def base():
     try:
         params = check.json(request)
@@ -17,8 +29,7 @@ def base():
     toret = ret(request.route.rule, params)
     return toret.ret()
 
-@post('/correct/')
-def base():
+@app.route('/correct/', method=['OPTIONS', 'POST'])def base():
     try:
         params = check.json(request)
     except:
@@ -81,6 +92,6 @@ def base(mail, name):
 
 if __name__ == '__main__':
         try:
-            run(host='0.0.0.0', port=8080)
+            run(app, host='0.0.0.0', port=8080)
         except:
             os._exit(0)
