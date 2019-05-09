@@ -29,7 +29,10 @@ def base():
     toret = ret(request.route.rule, params)
     return toret.ret()
 
-@app.route('/correct/', method=['OPTIONS', 'POST'])def base():
+@app.route('/correct/', method=['OPTIONS', 'POST'])
+def base():
+    if request.method == 'OPTIONS':
+        return {}
     try:
         params = check.json(request)
     except:
