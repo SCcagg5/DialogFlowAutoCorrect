@@ -34,7 +34,8 @@ new Vue({
         this.success = response.data.succes
         console.log(response);
         delete response.data.succes
-        response.data["errorcode"] = "WGW"
+        if (this.success == false)
+          response.data["errorcode"] = "WGW"
         this.error = JSON.stringify(response.data, undefined, 2).replace(/\n/g, '<br>');
         this.error = "<pre>" +this.error+ "</pre>"
         localStorage.history = true;
