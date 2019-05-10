@@ -60,13 +60,13 @@
 									<h3 class="panel-title" style="font-size: 24px">DialogFlow Autocorrect</h3>
 									<p class="panel-subtitle">
 										<div class="row">
-											<div class="col-md-4" style="margin-top: 17px">Last exercice tried: {{ lastexo }}
+											<div class="col-md-5" style="margin-top: 17px">Last exercice tried: {{ lastexo }}
 												<span v-if="success == false" class="label label-danger">FAIL</span>
 												<span v-if="success == null" class="label label-default">NONE</span>
 												<span v-if="success == true" class="label label-success">SUCCESS</span>
 											</div>
-											<div class="col-md-4" style="margin-top: 10px">
-												<input class="form-control" placeholder="Exercice Number" type="text" v-bind:input="lastexo" v-model="lastexo">
+											<div class="col-md-3" style="margin-top: 10px">
+												<input class="form-control" placeholder="Exercice Number" type="text" v-bind:input="exercice" v-model="exercice">
 											</div>
 											<div class="col-md-4" style="margin-top: 10px">
 												<div class="input-group">
@@ -94,8 +94,7 @@
 									<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
 								</div>
 							</div>
-							<div class="panel-body no-padding text-center" style="display: block;">
-								{{ error }}
+							<div class="panel-body no-padding text-center" style="display: block;text-align: left" v-html="error">
 							</div>
 						</div>
 						<div class="panel">
