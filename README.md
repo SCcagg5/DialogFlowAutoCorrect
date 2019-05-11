@@ -84,3 +84,24 @@ From inside the `back-end` dir:
   - *Here when inputing to dialogflow in language `your_lang` ('fr' / 'us') dialogflow will expect one of the waited possibilities and all value set to be retrieve*
   - *You can leave queries, waited and value empty to not be computed*
   - *One lang column, as many queries, waited, value as you want*
+
+To enable the full project:
+
+* _`git clone https://github.com/SCcagg5/DialogFlowAutoCorrect`_
+* _`git clone https://github.com/SCcagg5/DialogFlowMessenger`_
+* _`git clone https://github.com/SCcagg5/DialogFlowSentimentAnalyser`_
+* _`cp ./DialogFlowAutoCorrect/docker-compose_full.yml ./docker-compose.yml`_
+* _store your `GOOGLE_APPLICATION_CREDENTIALS.json` inside DialogFlowSentimentAnalyser's directory_
+* _`docker-compose up -d --build`_
+
+You can now:
+
+* *have acces to the AutoCorrect's Front using `localhost:8081`*
+* *have acces to the Messenger's Front using `localhost:8081`*
+
+* *ping the AutoCorrect's API using `localhost:5002`*
+* *ping the Messenger's API using `localhost:5001`*
+* *ping the Sentiments's API using `localhost:5000`*
+
+And Sentiment analysis is included in the Messenger's API response
+
